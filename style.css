@@ -1,0 +1,164 @@
+:root {
+  --body-c: #ffffff;
+  --text-c: #161a1d;
+  --title-c: #0b090a;
+  --primary-c: #0fa3b1;
+
+  --big-fs: 3.75rem;
+  --medium-fs: 2rem;
+  --normal-fs: 1.5rem;
+  --small-fs: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: none;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background-color: var(--body-c);
+  color: var(--text-c);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.8rem 5%;
+  background-color: var(--body-c);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_list {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.nav_item a {
+  font-size: var(--normal-fs);
+  color: var(--text-c);
+  text-transform: capitalize;
+  list-style: none;
+  padding: 0.4em 0.8em;
+}
+
+.nav_item a:hover {
+  background-color: var(--primary-c);
+  color: var(--body-c);
+  border-radius: 10px;
+}
+
+/* section about */
+#about {
+  margin: 12rem 20% 0 20%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--body-c);
+  align-items: center;
+}
+
+.about_foto {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.about_foto img {
+  width: 100%;
+}
+
+.about_me {
+  margin: 4em 0;
+  text-align: center;
+}
+
+.about_me h1 {
+  font-size: var(--big-fs);
+  font-weight: bolder;
+  color: var(--title-c);
+}
+
+.about_me span {
+  color: var(--primary-c);
+}
+
+.about_me p {
+  font-size: var(--normal-fs);
+  padding: 1em 3em;
+}
+
+.about_tech {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about_tech h1 {
+  font-size: var(--big-fs);
+}
+
+.about_tech h1 span {
+  color: var(--primary-c);
+}
+
+.about_tech p {
+  font-size: var(--normal-fs);
+  margin: 1em 0 2em 0;
+}
+
+.tech_stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2.5rem;
+  text-align: left;
+}
+
+.card-tech {
+  background-color: #f8f9fa;
+  padding: 1.3em 2em;
+  border-radius: 1em;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-tech h2 {
+  font-size: var(--normal-fs);
+  margin: 0.5em 0;
+}
+
+.card-tech p {
+  font-size: var(--small-fs);
+}
+
+.card-tech img {
+  width: 70px;
+  height: 70px;
+}
+
+/* section portofolio */
+#section2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
