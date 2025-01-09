@@ -116,7 +116,7 @@ header {
   text-align: center;
 }
 
-.about_me h1 {
+h1 {
   font-size: var(--big-fs);
   font-weight: bolder;
   color: var(--title-c);
@@ -220,6 +220,23 @@ header {
   padding: 1em 3em;
 }
 
+.project button {
+  font-size: var(--normal-fs);
+  color: var(--body-c);
+  padding: 1em 1.6em;
+  margin: 1em;
+  border: none;
+  border-radius: 1.4em;
+  background-color: var(--primary-c);
+  transition: all 1s;
+}
+
+.project button:hover {
+  transition: all 1.5s;
+  transform: rotate();
+  box-shadow: 5px 10px 5px var(--text-c);
+}
+
 .porto_stack {
   display: grid;
   grid-gap: 2.5rem;
@@ -234,4 +251,53 @@ header {
 
 .porto_stack .card img {
   width: 100%;
+}
+
+#section3 {
+  min-height: 50vh;
+  background: var(--text-c);
+  border-radius: 50% 0 0 0;
+  padding: 2em 20%;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact h1 {
+  color: var(--primary-c);
+}
+
+.contact h1 span {
+  color: var(--body-c);
+}
+
+.sosmed {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sosmed-icon i {
+  font-size: var(--big-fs);
+  color: var(--primary-c);
+  transition: all 1s;
+}
+
+.sosmed-icon i:hover {
+  color: var(--body-c);
+}
+
+hr {
+  color: var(--primary-c);
+}
+
+footer {
+  background-color: var(--text-c);
+  color: var(--body-c);
+  text-align: center;
+}
+
+footer p {
+  padding: 1em;
 }
