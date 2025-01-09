@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --body-c: #ffffff;
   --text-c: #161a1d;
@@ -28,6 +30,27 @@ html {
   scroll-behavior: smooth;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.activated a {
+  background-color: var(--primary-c) !important;
+  color: var(--body-c) !important;
+  border-radius: 10px;
+  transform: rotateX("angle");
+  transition: all 1s;
+}
+
 /* header */
 header {
   position: fixed;
@@ -37,6 +60,7 @@ header {
   padding: 1.8rem 5%;
   background-color: var(--body-c);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 10000;
 }
 
 .nav {
@@ -62,14 +86,14 @@ header {
 }
 
 .nav_item a:hover {
-  background-color: var(--primary-c);
-  color: var(--body-c);
+  background-color: #f8f9fa;
+  color: var(--primary-c);
   border-radius: 10px;
 }
 
 /* section about */
 #about {
-  margin: 12rem 20% 0 20%;
+  padding: 12rem 20% 0 20%;
   display: flex;
   flex-direction: column;
   background-color: var(--body-c);
@@ -134,31 +158,80 @@ header {
   text-align: left;
 }
 
-.card-tech {
+.tech_stack .card {
   background-color: #f8f9fa;
   padding: 1.3em 2em;
   border-radius: 1em;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
-.card-tech h2 {
-  font-size: var(--normal-fs);
-  margin: 0.5em 0;
+.tech_stack .card:nth-child(2) {
+  transition-delay: 200ms;
 }
 
-.card-tech p {
-  font-size: var(--small-fs);
+.tech_stack .card:nth-child(3) {
+  transition-delay: 400ms;
 }
 
-.card-tech img {
+.tech_stack .card:nth-child(5) {
+  transition-delay: 200ms;
+}
+
+.tech_stack .card:nth-child(6) {
+  transition-delay: 400ms;
+}
+
+.tech_stack .card img {
   width: 70px;
   height: 70px;
 }
 
+.card h2 {
+  font-size: var(--normal-fs);
+  margin: 0.5em 0;
+}
+
+.card p {
+  font-size: var(--small-fs);
+}
+
 /* section portofolio */
 #section2 {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 12rem 20% 12rem 20%;
+}
+
+.project {
+  margin: 4em 0;
+  text-align: center;
+}
+
+.project h1 {
+  font-size: var(--big-fs);
+  font-weight: bolder;
+  color: var(--title-c);
+}
+
+.project span {
+  color: var(--primary-c);
+}
+
+.project p {
+  font-size: var(--normal-fs);
+  padding: 1em 3em;
+}
+
+.porto_stack {
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.porto_stack .card {
+  background-color: #f8f9fa;
+  border-radius: 1em;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.porto_stack .card img {
+  width: 100%;
 }
